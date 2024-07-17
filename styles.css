@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Highway+Gothic&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Highway Gothic', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: 'Highway Gothic', sans-serif;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: 'Highway Gothic', sans-serif;
+}
+
+.magic-ball {
+    width: 350px;
+    height: 350px;
+    background: url('Magic_eight_ball.png') no-repeat center center;
+    background-size: contain;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s infinite;
+}
+
+.answer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    width: 70%;
+    font-family: 'Highway Gothic', sans-serif;
+}
+
+.corner-image {
+    position: absolute;
+    top: 40px;
+    right: -30px;
+    width: 675px;
+    transform: rotate(30deg);
+}
+
+.car-image {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.headlights-on {
+    filter: brightness(1.5);
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .magic-ball {
+        width: 300px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .answer {
+        font-size: 0.8em;
+    }
+
+    .corner-image {
+        top: 10px;
+        right: 10px;
+        width: 100px;
+        transform: rotate(30deg);
+        z-index: 1;
+    }
+
+    .car-image {
+        bottom: 5px;
+        left: 5px;
+        width: 150px;
+    }
+}
